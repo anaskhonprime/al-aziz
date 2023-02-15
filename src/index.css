@@ -6,6 +6,14 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.header-banner {
+    background-image: url('./asset/images/bannerbackground.png');
+    height: 350px !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }

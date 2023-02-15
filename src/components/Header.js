@@ -1,36 +1,17 @@
 import { React, useState, useEffect } from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
-
-import imageData from "../asset/data/carousel";
-
-const renderSlides = imageData.map(image => (
-    <div key={image.alt}>
-      <img src={image.url} alt={image.alt} />
-  </div>
-));
 
 const Header = () => {
-  const [currentIndex, setCurrentIndex] = useState();
-  function handleChange(index) {
-    setCurrentIndex(index);
-  }
-
   return (
-    <div className="flex justify-center items-center mt-32 py-5 px-3">
-      <div className="m-auto">
-        <Carousel
-          showArrows={false}
-          autoPlay={true}
-          infiniteLoop={true}
-          showThumbs={false}
-          selectedItem={imageData[currentIndex]}
-          onChange={handleChange}
-          className="w-[400px] lg:hidden">
-          {renderSlides}
-        </Carousel>
+    <section className="header-banner h-96 w-full bg-yellow-50 mt-20">
+      <div className="flex flex-col items-center justify-center h-full">
+        <p className="text-center text-3xl md:text-6xl lg:text-5xl poppins font-bold text-green-700">
+          Al-Aziz
+        </p>
+        <p className="text-center text-3xl md:text-4xl lg:text-5xl poppins font-normal text-gray-700 mt-3">
+          Asian Cuisine
+        </p>
       </div>
-    </div>
+    </section>
   );
 };
 
